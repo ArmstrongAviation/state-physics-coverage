@@ -1,0 +1,10 @@
+{
+  "groups": 256,
+  "train_groups": 192,
+  "test_groups": 64,
+  "train_episodes": 128,
+  "test_episodes": 64,
+  "episode_overlap": [],
+  "episode_overlap_count": 0,
+  "pair_overlap_count": 0
+}

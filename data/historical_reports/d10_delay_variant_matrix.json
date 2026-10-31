@@ -1,0 +1,160 @@
+{
+  "label": "delay_only_unique",
+  "state_seeds": 3,
+  "mechanism_seeds": 2,
+  "test_groups": 64,
+  "variants": {
+    "delay_2": {
+      "teacher_mse": {
+        "state_mean": 1.2026637782756653,
+        "state_seed_std": 0.014981020997661635,
+        "mechanism_mean": 1.2270585481957015,
+        "mechanism_seed_std": 0.008745901644361419,
+        "delta": 0.024394769920036242,
+        "relative_change": 0.020283948315972862,
+        "paired_group_ci95": [
+          0.011544124665238948,
+          0.03739759602057924
+        ]
+      },
+      "teacher_cosine_error": {
+        "state_mean": 0.8237691797936956,
+        "state_seed_std": 0.0029477742365105297,
+        "mechanism_mean": 0.8328718739406515,
+        "mechanism_seed_std": 0.0003435393646561196,
+        "delta": 0.009102694146956017,
+        "relative_change": 0.011050054275198415,
+        "paired_group_ci95": [
+          0.0022862869442044037,
+          0.015840397636552737
+        ]
+      },
+      "rollout_mse": {
+        "state_mean": 1.4071139973864235,
+        "state_seed_std": 0.007842694318247051,
+        "mechanism_mean": 1.412691532090927,
+        "mechanism_seed_std": 0.005947960934967074,
+        "delta": 0.005577534704503659,
+        "relative_change": 0.003963811542535561,
+        "paired_group_ci95": [
+          -0.015964526615183168,
+          0.025970648873502505
+        ]
+      }
+    },
+    "mass_high": {
+      "teacher_mse": {
+        "state_mean": 1.1908419197425246,
+        "state_seed_std": 0.009885612179009635,
+        "mechanism_mean": 1.2239691870830334,
+        "mechanism_seed_std": 0.0018593106184283483,
+        "delta": 0.0331272673405086,
+        "relative_change": 0.027818358416263296,
+        "paired_group_ci95": [
+          0.022093552256141,
+          0.04426459042965522
+        ]
+      },
+      "teacher_cosine_error": {
+        "state_mean": 0.813538367808279,
+        "state_seed_std": 0.0015749103415492966,
+        "mechanism_mean": 0.8286212051494253,
+        "mechanism_seed_std": 0.0014898929241504125,
+        "delta": 0.01508283734114633,
+        "relative_change": 0.018539798413909347,
+        "paired_group_ci95": [
+          0.009434435564671039,
+          0.020810123650072544
+        ]
+      },
+      "rollout_mse": {
+        "state_mean": 1.39657414380323,
+        "state_seed_std": 0.009012899807158645,
+        "mechanism_mean": 1.4110131275891842,
+        "mechanism_seed_std": 0.0034958356298064566,
+        "delta": 0.01443898378595435,
+        "relative_change": 0.010338859451194829,
+        "paired_group_ci95": [
+          -0.0014075386829467402,
+          0.030640486908291853
+        ]
+      }
+    },
+    "mass_high_delay_2": {
+      "teacher_mse": {
+        "state_mean": 1.2006246599679191,
+        "state_seed_std": 0.014502036513528304,
+        "mechanism_mean": 1.2293494986887608,
+        "mechanism_seed_std": 0.009901070992840783,
+        "delta": 0.028724838720841514,
+        "relative_change": 0.02392491148866545,
+        "paired_group_ci95": [
+          0.016499006951279493,
+          0.040803644644889815
+        ]
+      },
+      "teacher_cosine_error": {
+        "state_mean": 0.822086615919101,
+        "state_seed_std": 0.00368948792539137,
+        "mechanism_mean": 0.8347659988794476,
+        "mechanism_seed_std": 0.0021698231162425976,
+        "delta": 0.012679382960346581,
+        "relative_change": 0.015423414899135542,
+        "paired_group_ci95": [
+          0.005980782007100073,
+          0.01924650867499792
+        ]
+      },
+      "rollout_mse": {
+        "state_mean": 1.4100856314137302,
+        "state_seed_std": 0.009231961171278833,
+        "mechanism_mean": 1.415520338781385,
+        "mechanism_seed_std": 0.0068601940559253945,
+        "delta": 0.005434707367654761,
+        "relative_change": 0.003854168318987838,
+        "paired_group_ci95": [
+          -0.014722331956511833,
+          0.024904736653358385
+        ]
+      }
+    },
+    "nominal": {
+      "teacher_mse": {
+        "state_mean": 1.1908895712069891,
+        "state_seed_std": 0.005062038557531248,
+        "mechanism_mean": 1.2230941912987165,
+        "mechanism_seed_std": 0.0019768862219456344,
+        "delta": 0.03220462009172748,
+        "relative_change": 0.027042490647632,
+        "paired_group_ci95": [
+          0.02018352805214281,
+          0.04444481074547013
+        ]
+      },
+      "teacher_cosine_error": {
+        "state_mean": 0.8131570541127413,
+        "state_seed_std": 0.003787788269166178,
+        "mechanism_mean": 0.8295124580359293,
+        "mechanism_seed_std": 0.0016337283374885188,
+        "delta": 0.016355403923188072,
+        "relative_change": 0.02011346251067565,
+        "paired_group_ci95": [
+          0.010555171459283735,
+          0.02213975527190117
+        ]
+      },
+      "rollout_mse": {
+        "state_mean": 1.395746867413874,
+        "state_seed_std": 0.005382802845759619,
+        "mechanism_mean": 1.409290462292524,
+        "mechanism_seed_std": 0.003402646240398877,
+        "delta": 0.013543594878649822,
+        "relative_change": 0.009703475031790134,
+        "paired_group_ci95": [
+          -0.006003304313074931,
+          0.033660739020841095
+        ]
+      }
+    }
+  }
+}

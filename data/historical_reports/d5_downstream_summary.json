@@ -1,0 +1,55 @@
+{
+  "families": {
+    "state": {
+      "seeds": 2,
+      "idm": {
+        "normalized_action_mse": {
+          "mean": 0.9764232337474823,
+          "seed_std": 0.02731853353354874
+        },
+        "mean_action_r": {
+          "mean": 0.35163948088884356,
+          "seed_std": 0.01868980881644489
+        },
+        "gripper_action_r": {
+          "mean": 0.12319710105657578,
+          "seed_std": 0.0020798310701792156
+        }
+      },
+      "control": {
+        "mean": 0.0,
+        "seed_std": 0.0,
+        "per_seed": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "mechanism": {
+      "seeds": 3,
+      "idm": {
+        "normalized_action_mse": {
+          "mean": 1.045437177022298,
+          "seed_std": 0.011301238606986981
+        },
+        "mean_action_r": {
+          "mean": 0.3235385183493296,
+          "seed_std": 0.008808102453182375
+        },
+        "gripper_action_r": {
+          "mean": 0.15158964296181995,
+          "seed_std": 0.03134928640886618
+        }
+      },
+      "control": {
+        "mean": 0.0,
+        "seed_std": 0.0,
+        "per_seed": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    }
+  }
+}
