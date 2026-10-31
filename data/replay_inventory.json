@@ -1,0 +1,354 @@
+{
+  "cube_mass_high_delay_2.h5": {
+    "source_bytes": 137261597,
+    "source_sha256": "ab3126c96df9eb32fa6294bea076c02bb423a1018486208551ac4e22d9f8f8a0",
+    "omitted": [
+      "pixels"
+    ],
+    "arrays": {
+      "action": {
+        "shape": [
+          256,
+          100,
+          5
+        ],
+        "dtype": "float32"
+      },
+      "block_pos": {
+        "shape": [
+          256,
+          21,
+          3
+        ],
+        "dtype": "float32"
+      },
+      "effector_pos": {
+        "shape": [
+          256,
+          21,
+          3
+        ],
+        "dtype": "float32"
+      },
+      "gripper_contact": {
+        "shape": [
+          256,
+          21,
+          1
+        ],
+        "dtype": "float32"
+      },
+      "group_id": {
+        "shape": [
+          256
+        ],
+        "dtype": "int64"
+      },
+      "initial_qpos": {
+        "shape": [
+          256,
+          21
+        ],
+        "dtype": "float64"
+      },
+      "initial_qvel": {
+        "shape": [
+          256,
+          20
+        ],
+        "dtype": "float64"
+      },
+      "pixels": {
+        "shape": [
+          256,
+          21,
+          224,
+          224,
+          3
+        ],
+        "dtype": "uint8"
+      },
+      "source_episode": {
+        "shape": [
+          256
+        ],
+        "dtype": "int64"
+      },
+      "source_start": {
+        "shape": [
+          256
+        ],
+        "dtype": "int64"
+      }
+    },
+    "attrs": {
+      "frame_skip": "5",
+      "source_h5": "/data/chenyizi/le-wm/datasets/lewm-cube/cube_single_expert.h5",
+      "variant": "mass_high_delay_2"
+    }
+  },
+  "cube_nominal.h5": {
+    "source_bytes": 137465266,
+    "source_sha256": "ef22ac72739729f72647d1f79ada85cb9ef13b1da62b86786e036b19f2763220",
+    "omitted": [
+      "pixels"
+    ],
+    "arrays": {
+      "action": {
+        "shape": [
+          256,
+          100,
+          5
+        ],
+        "dtype": "float32"
+      },
+      "block_pos": {
+        "shape": [
+          256,
+          21,
+          3
+        ],
+        "dtype": "float32"
+      },
+      "effector_pos": {
+        "shape": [
+          256,
+          21,
+          3
+        ],
+        "dtype": "float32"
+      },
+      "gripper_contact": {
+        "shape": [
+          256,
+          21,
+          1
+        ],
+        "dtype": "float32"
+      },
+      "group_id": {
+        "shape": [
+          256
+        ],
+        "dtype": "int64"
+      },
+      "initial_qpos": {
+        "shape": [
+          256,
+          21
+        ],
+        "dtype": "float64"
+      },
+      "initial_qvel": {
+        "shape": [
+          256,
+          20
+        ],
+        "dtype": "float64"
+      },
+      "pixels": {
+        "shape": [
+          256,
+          21,
+          224,
+          224,
+          3
+        ],
+        "dtype": "uint8"
+      },
+      "source_episode": {
+        "shape": [
+          256
+        ],
+        "dtype": "int64"
+      },
+      "source_start": {
+        "shape": [
+          256
+        ],
+        "dtype": "int64"
+      }
+    },
+    "attrs": {
+      "frame_skip": "5",
+      "source_h5": "/data/chenyizi/le-wm/datasets/lewm-cube/cube_single_expert.h5",
+      "variant": "nominal"
+    }
+  },
+  "cube_mass_high.h5": {
+    "source_bytes": 137442775,
+    "source_sha256": "9b67b685fad8b1769ea21ad625dfb3446c537dbb4415765707ef3538723e3085",
+    "omitted": [
+      "pixels"
+    ],
+    "arrays": {
+      "action": {
+        "shape": [
+          256,
+          100,
+          5
+        ],
+        "dtype": "float32"
+      },
+      "block_pos": {
+        "shape": [
+          256,
+          21,
+          3
+        ],
+        "dtype": "float32"
+      },
+      "effector_pos": {
+        "shape": [
+          256,
+          21,
+          3
+        ],
+        "dtype": "float32"
+      },
+      "gripper_contact": {
+        "shape": [
+          256,
+          21,
+          1
+        ],
+        "dtype": "float32"
+      },
+      "group_id": {
+        "shape": [
+          256
+        ],
+        "dtype": "int64"
+      },
+      "initial_qpos": {
+        "shape": [
+          256,
+          21
+        ],
+        "dtype": "float64"
+      },
+      "initial_qvel": {
+        "shape": [
+          256,
+          20
+        ],
+        "dtype": "float64"
+      },
+      "pixels": {
+        "shape": [
+          256,
+          21,
+          224,
+          224,
+          3
+        ],
+        "dtype": "uint8"
+      },
+      "source_episode": {
+        "shape": [
+          256
+        ],
+        "dtype": "int64"
+      },
+      "source_start": {
+        "shape": [
+          256
+        ],
+        "dtype": "int64"
+      }
+    },
+    "attrs": {
+      "frame_skip": "5",
+      "source_h5": "/data/chenyizi/le-wm/datasets/lewm-cube/cube_single_expert.h5",
+      "variant": "mass_high"
+    }
+  },
+  "cube_delay_2.h5": {
+    "source_bytes": 137644374,
+    "source_sha256": "7e4c7b8c6a67f572e4cc814220ec1bd0be1d6e49e5b19858c3f5ff6887ee0bc9",
+    "omitted": [
+      "pixels"
+    ],
+    "arrays": {
+      "action": {
+        "shape": [
+          256,
+          100,
+          5
+        ],
+        "dtype": "float32"
+      },
+      "block_pos": {
+        "shape": [
+          256,
+          21,
+          3
+        ],
+        "dtype": "float32"
+      },
+      "effector_pos": {
+        "shape": [
+          256,
+          21,
+          3
+        ],
+        "dtype": "float32"
+      },
+      "gripper_contact": {
+        "shape": [
+          256,
+          21,
+          1
+        ],
+        "dtype": "float32"
+      },
+      "group_id": {
+        "shape": [
+          256
+        ],
+        "dtype": "int64"
+      },
+      "initial_qpos": {
+        "shape": [
+          256,
+          21
+        ],
+        "dtype": "float64"
+      },
+      "initial_qvel": {
+        "shape": [
+          256,
+          20
+        ],
+        "dtype": "float64"
+      },
+      "pixels": {
+        "shape": [
+          256,
+          21,
+          224,
+          224,
+          3
+        ],
+        "dtype": "uint8"
+      },
+      "source_episode": {
+        "shape": [
+          256
+        ],
+        "dtype": "int64"
+      },
+      "source_start": {
+        "shape": [
+          256
+        ],
+        "dtype": "int64"
+      }
+    },
+    "attrs": {
+      "frame_skip": "5",
+      "source_h5": "/data/chenyizi/le-wm/datasets/lewm-cube/cube_single_expert.h5",
+      "variant": "delay_2"
+    }
+  }
+}
