@@ -1,0 +1,7 @@
+# Keep the unmodified IEEE Access template files in template/.
+# The trailing path separator retains the TeX installation's default paths.
+my $ieee_path_separator = ($^O eq 'MSWin32') ? ';' : ':';
+for my $ieee_path_variable (qw(TEXINPUTS BSTINPUTS TFMFONTS T1FONTS TEXFONTMAPS)) {
+    my $ieee_previous_path = $ENV{$ieee_path_variable} // '';
+    $ENV{$ieee_path_variable} = './template//' . $ieee_path_separator . $ieee_previous_path;
+}
