@@ -1,3 +1,5 @@
+> **Upload in progress:** Only this README has been committed so far. The manuscript, original ZIP, and separated code/data files are prepared but their upload is pending. The paths and reproduction instructions below describe the intended completed layout; download links will become available after those files are uploaded.
+
 # State and Physics Coverage for Visual World Models
 
 Supplementary code and numerical data for **State and Physics Coverage for Visual World Models: A Fixed-Budget Empirical Study**.
