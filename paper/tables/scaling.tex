@@ -1,0 +1,17 @@
+\begin{table*}[t]
+\centering
+\caption{Earlier budget scan on a group-disjoint but source-episode-overlapping dataset. Each run uses 10,000 updates. Values are raw rollout MSE on MD; intervals average model seeds before resampling groups and do not adjust for shared source episodes. These exploratory results are not pooled with the strict-split study.}
+\label{tab:scaling}
+\footnotesize
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{rrr rc}
+\toprule
+Windows & S/P seeds & State (S) & Paired (P) & P $-$ S [group-only 95\% interval] \\
+\midrule
+96 & 2/2 & $1.0946\pm0.0565$ & $1.2122\pm0.0511$ & $+0.1176$ $[+0.0982,+0.1374]$ \\
+192 & 2/2 & $1.2645\pm0.0271$ & $1.2871\pm0.0327$ & $+0.0226$ $[-0.0055,+0.0545]$ \\
+384 & 3/4 & $1.3838\pm0.0163$ & $1.3361\pm0.0216$ & $-0.0477$ $[-0.0778,-0.0181]$ \\
+\bottomrule
+\end{tabular}
+\end{table*}
