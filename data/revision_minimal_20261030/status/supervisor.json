@@ -1,0 +1,12 @@
+{
+  "time": "2026-10-30T11:32:41.493275+00:00",
+  "pid": 384104,
+  "stage": "complete",
+  "exit_codes": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "existing": 0
+  },
+  "summary": "/data/chenyizi/lewm-data-study/revision_minimal_20261030/summary.md"
+}

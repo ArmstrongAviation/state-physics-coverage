@@ -1,0 +1,14 @@
+{
+  "time": "2026-10-30T10:46:09.764938+00:00",
+  "pid": 384108,
+  "stage": "complete",
+  "gpu": 4,
+  "tags": [
+    "d8_cf_state_s0",
+    "d8_cf_state_s1",
+    "d10_cf_state_s3",
+    "d8_cf_mechanism_s0",
+    "d8_cf_mechanism_s1",
+    "d8_cf_mechanism_s2"
+  ]
+}
