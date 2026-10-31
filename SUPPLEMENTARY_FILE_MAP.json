@@ -1,7 +1,7 @@
 {
   "description": "Original ZIP paths mapped to the separated repository layout. All 140 archived files are byte-for-byte unchanged. Original relative paths can be restored by extracting the preserved ZIP.",
   "original_zip_sha256": "6a0d8c77f03c75cba086dc29eac599a2c4a1e7e2994658ccbe2db74ab3fe7046",
-  "paper_sha256": "516e4e0df6a2ca724874f740c86812821c724ffb1880689fd69db221b940d751",
+  "paper_sha256": "a67dc245b97fd89170796327e4fc635176c85f84473b49400659975ff65bb90b",
   "files": {
     "DATA_DICTIONARY.txt": {
       "repository_path": "docs/DATA_DICTIONARY.txt",
