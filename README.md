@@ -2,11 +2,13 @@
 
 Supplementary code and numerical data for **State and Physics Coverage for Visual World Models: A Fixed-Budget Empirical Study**.
 
-The uploaded manuscript and original supplementary archive are included. The archive's 140 files are also extracted and organized below into code, data/results, and documentation. Their contents are unchanged; `SUPPLEMENTARY_FILE_MAP.json` records every original path, repository path, file size, and SHA-256 hash.
+The uploaded manuscript, its complete LaTeX source package, and the original supplementary archive are included. The archive's 140 files are also extracted and organized below into code, data/results, and documentation. Their contents are unchanged; `SUPPLEMENTARY_FILE_MAP.json` records every original path, repository path, file size, and SHA-256 hash.
 
 ## Paper and downloads
 
 - [Manuscript (PDF)](paper/ieee_access_2.pdf)
+- [Manuscript LaTeX source](paper/main.tex) and [source ZIP](paper/ieee_access_2.zip)
+- [Manuscript build instructions](paper/BUILD_README.txt)
 - [Original supplementary code and data (ZIP)](archive/IEEE_Access_Supplementary_Code_Data.zip)
 - [Original supplementary README](docs/README.txt)
 - [Data dictionary](docs/DATA_DICTIONARY.txt)
@@ -28,8 +30,19 @@ The uploaded manuscript and original supplementary archive are included. The arc
 | `data/historical_reports/` | Earlier ablation, sampling, scaling, control, and audit reports. |
 | `data/manuscript_assets/` | Archived report inputs, generated figures, and table sources. |
 | `docs/` | Original supplementary documentation, integrity manifest, and archived verification report. |
-| `paper/` | Uploaded manuscript PDF. |
+| `paper/` | Uploaded manuscript PDF, complete LaTeX sources, figures, tables, author images, template/font assets, and original source ZIP. |
 | `archive/` | Unmodified original supplementary ZIP. |
+
+## Build the manuscript
+
+The author-provided `ieee_access_2.zip` (2026-10-31) is preserved unchanged in `paper/`; its 76 files are also extracted there byte for byte. From the repository root, build with a normal TeX Live or MiKTeX installation:
+
+```bash
+cd paper
+latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
+```
+
+Keep `latexmkrc` enabled: it adds the bundled `template/` classes, bibliography style, and font assets to the TeX search paths. On Overleaf, upload the source ZIP, choose `main.tex` as the main document, and use pdfLaTeX. See [BUILD_README.txt](paper/BUILD_README.txt) for dependencies and source-version notes.
 
 ## Reproduce the numerical results
 
