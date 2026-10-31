@@ -1,0 +1,14 @@
+{
+  "packages": {
+    "torch": "2.5.1+cu124",
+    "torchvision": "0.20.1+cu124",
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "h5py": "3.16.0",
+    "mujoco": "3.8.0",
+    "ogbench": "1.2.1",
+    "transformers": "5.6.2"
+  },
+  "project_git_head": "0fc2b7382b222228bed80c11d9c344cf92e286ce",
+  "source_git_head": "ca231f9f9d9ab041034b6d05e90b6e04bd6cff82"
+}

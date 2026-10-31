@@ -1,0 +1,59 @@
+RETRAINING AND VISUAL RE-EVALUATION: ADDITIONAL REQUIREMENTS
+
+The tested portable workflow is the numerical postprocessing in README.txt.
+Full training/inference has not been rerun from this exported archive.
+
+Required outside this archive:
+1. cube_single_expert.h5 (the source expert dataset). The archived original
+   download_cube.sh identifies Hugging Face dataset quentinll/lewm-cube.
+   That script uses historical local paths and a mirror, and also downloads
+   an upstream pretrained checkpoint. Such pretrained weights are NOT the
+   random-initialization checkpoints evaluated in this manuscript.
+2. Four original replay HDF5 files, including pixels, matching the inventory.
+   Generation scripts and the actual ordered source manifest are included.
+   Replaying from recorded qpos/qvel need not reproduce hidden simulator or
+   rendering state bit-for-bit; use original hashes to identify exact files.
+3. Nine weights_final.pt files in exp5b_runs/<tag>/ for re-evaluation. Model
+   tags are in config.json; trained weights themselves are not included.
+4. The compatible model/runtime environment. Recorded core versions include
+   Python 3.10 environment, PyTorch 2.5.1+cu124, torchvision 0.20.1+cu124,
+   stable-pretraining 0.1.6, Transformers 5.6.2, NumPy 2.2.6, h5py 3.16.0,
+   hdf5plugin 6.0.0, MuJoCo 3.8.0, OGBench 1.2.1, and einops 0.8.2.
+   data/installed_packages.json is an environment inventory, not a portable
+   lockfile guaranteeing an identical installation on every platform.
+
+Original checkout IDs:
+  data-study: 0fc2b7382b222228bed80c11d9c344cf92e286ce
+  model:      ca231f9f9d9ab041034b6d05e90b6e04bd6cff82
+Added experiment files are identified by source_sha256.json, rather than
+being implied to exist in those older commit IDs.
+
+Porting the archived experiment code:
+- Put original_code/*.py in the data-study root; retain the
+  revision_minimal_20261030 directory beside them.
+- Set LEWM_SOURCE_REPO for train_data_arm.py and provide the full compatible
+  LeWorldModel checkout/runtime. The partial jepa.py/module.py snapshot is
+  supplied for model inspection. The trainer's stable_pretraining loader uses
+  an explicit .venv/lib/python3.10/site-packages location; adjust SP_PATH if
+  the environment layout differs. Optional legacy monitoring functions import
+  exp4_contact_mse, which is outside this partial snapshot.
+- Update ROOT in prepare.py/evaluate_physical.py, PY and PYTHONPATH in run.py,
+  and root/revision/data_dir/cache/manifest paths in config.json.
+- Do not run the archived supervisor unchanged: GPU allocation and absolute
+  paths describe the original server. Existing outputs are deliberately
+  protected against overwrite. Use a fresh working copy for new runs.
+- Preserve the frozen assignment, group boundaries, seeds, settings, and
+  final-checkpoint selection. Do not tune using held-out MD results.
+
+Strict replay generator settings:
+  --manifest data/cube_episode_disjoint.npz --preserve-manifest-order
+  --episodes 256 --horizon 100 --frame-skip 5 --seed 20260824
+  --mass-high-scale 4
+  --variants nominal mass_high delay_2 mass_high_delay_2
+  Supply --source and --out-dir for the new machine explicitly.
+Use the supplied manifest; do not let a newly generated random source split
+silently replace it. Cache and training settings are recorded in the original
+scripts, config.json, cache metadata, and per-checkpoint training_metadata.
+
+The manuscript does not claim that full data or weights are publicly hosted.
+Questions about omitted artifacts can be directed to the corresponding author.

@@ -1,0 +1,94 @@
+{
+  "root": "/data/chenyizi/lewm-data-study",
+  "revision": "/data/chenyizi/lewm-data-study/revision_minimal_20261030",
+  "data_dir": "/data/chenyizi/lewm-data-study/counterfactual_v3_episode_disjoint",
+  "cache": "/data/chenyizi/lewm-data-study/cache/cf_v3_unpaired_d11",
+  "families": {
+    "state": [
+      "d8_cf_state_s0",
+      "d8_cf_state_s1",
+      "d10_cf_state_s3"
+    ],
+    "paired": [
+      "d8_cf_mechanism_s0",
+      "d8_cf_mechanism_s1",
+      "d8_cf_mechanism_s2"
+    ],
+    "unpaired": [
+      "d11_cf_unpaired_s0",
+      "d11_cf_unpaired_s1",
+      "d11_cf_unpaired_s2"
+    ]
+  },
+  "training_args": {
+    "w": 10.0,
+    "percentile": 0.85,
+    "lamb": 0.09,
+    "lr": 5e-05,
+    "weight_decay": 0.001,
+    "steps": 10000,
+    "warmup_steps": 2000,
+    "batch_size": 32,
+    "seed": 0,
+    "device": "cuda:0",
+    "n_train_eps": 8000,
+    "n_probe_tr": 300,
+    "n_probe_val": 200,
+    "num_workers": 0,
+    "no_cereg": true,
+    "no_amp": false,
+    "log_every": 1000,
+    "eval_every": 100000,
+    "straight_every": 100000,
+    "save_every": 10000,
+    "resume_from": null,
+    "resume_step": 0,
+    "tag": "d8_cf_state_s0",
+    "window_manifest": "/data/chenyizi/lewm-data-study/cache/cf_v3_nominal/manifest.npz",
+    "cache_dir": "/data/chenyizi/lewm-data-study/cache/cf_v3_nominal",
+    "final_contact_eps": 50,
+    "final_straight_eps": 50,
+    "skip_final_eval": true,
+    "skip_initial_eval": true
+  },
+  "reusable_args_differences": {
+    "d8_cf_state_s0": {},
+    "d8_cf_state_s1": {
+      "seed": 1,
+      "tag": "d8_cf_state_s1"
+    },
+    "d10_cf_state_s3": {
+      "seed": 3,
+      "tag": "d10_cf_state_s3"
+    },
+    "d8_cf_mechanism_s0": {
+      "tag": "d8_cf_mechanism_s0",
+      "window_manifest": "/data/chenyizi/lewm-data-study/cache/cf_v3_mechanism/manifest.npz",
+      "cache_dir": "/data/chenyizi/lewm-data-study/cache/cf_v3_mechanism"
+    },
+    "d8_cf_mechanism_s1": {
+      "seed": 1,
+      "tag": "d8_cf_mechanism_s1",
+      "window_manifest": "/data/chenyizi/lewm-data-study/cache/cf_v3_mechanism/manifest.npz",
+      "cache_dir": "/data/chenyizi/lewm-data-study/cache/cf_v3_mechanism"
+    },
+    "d8_cf_mechanism_s2": {
+      "seed": 2,
+      "tag": "d8_cf_mechanism_s2",
+      "window_manifest": "/data/chenyizi/lewm-data-study/cache/cf_v3_mechanism/manifest.npz",
+      "cache_dir": "/data/chenyizi/lewm-data-study/cache/cf_v3_mechanism"
+    }
+  },
+  "test_group_start": 192,
+  "test_group_end": 256,
+  "variants": [
+    "nominal",
+    "mass_high",
+    "delay_2",
+    "mass_high_delay_2"
+  ],
+  "primary_variant": "mass_high_delay_2",
+  "primary_physical_metric": "rollout block mean Euclidean position error (meters), averaged over 18 future frames",
+  "calibration": "Common nominal groups 0:192, frames 0:20; episode-disjoint calibration validation; never test groups or composed physics.",
+  "bootstrap": "Report both conditional paired-group CI (seed means fixed) and crossed bootstrap resampling model seeds independently within arms and shared test groups. Three seeds remain a small sample."
+}

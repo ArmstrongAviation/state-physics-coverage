@@ -1,0 +1,71 @@
+DATA DICTIONARY
+
+1. data/cube_<variant>_states.npz
+Variants: nominal, mass_high, delay_2, mass_high_delay_2.
+These are exact array exports from the original replay HDF5 files, excluding
+only pixels. They are NOT replacement inputs for the visual evaluator.
+Load with numpy.load(path, allow_pickle=False).
+
+array                shape          meaning
+action               256,100,5      recorded raw action sequence
+block_pos            256,21,3       rendered-step block xyz, meters
+effector_pos         256,21,3       rendered-step end-effector xyz, meters
+gripper_contact      256,21,1       recorded gripper-contact indicator
+group_id             256            replay group identifiers
+initial_qpos         256,21         initial generalized positions
+initial_qvel         256,20         initial generalized velocities
+source_episode       256            source episode identifiers
+source_start         256            raw action start within source episode
+
+Array dtypes and original attributes are in replay_inventory.json.
+The action array contains the shared requested action sequence; in D/MD,
+the simulator applies the two-raw-step delay queue initialized by zeros.
+All conditions share recorded initial configurations/actions and source IDs.
+N is nominal; M scales mass and inertia by four; D delays two raw actions.
+
+Groups [0,192) are training records from 128 episodes; [192,256) are test
+records from 64 different episodes. Groups 45 and 173 duplicate episode 4022,
+start 97. Their state/action arrays coincide, though original pixels differ.
+State uses N groups [0,192); paired uses N/M/D groups [0,64).
+Unpaired assignment is in revision_minimal_20261030/data_audit.json.
+Training windows begin at latent indices 0 and 10 and each contain 10 frames.
+Evaluation starts from observed frames 0,1,2 and predicts frames 3 through 20.
+
+2. revision_minimal_20261030/latent/<tag>.json
+Original latent-evaluation reports. For each variant, group_teacher_mse,
+group_teacher_cosine_error, and group_rollout_mse are length-64 arrays in
+test-group order 192 through 255. The manuscript's raw latent statistics
+are aggregated from these reports.
+
+3. revision_minimal_20261030/physical/<tag>.json
+Each variant includes group_ids, source_episodes, contact_flags, and metrics.
+Each metric contains mean (scalar), per_horizon (18), per_group (64), and
+per_group_horizon (64 by 18). Position Euclidean errors are in meters;
+coordinate MSE is in square meters. Tables convert Euclidean errors to cm.
+The observed, teacher, rollout, decoded_persistence, and true_state_persistence
+prefixes distinguish the readout/prediction/reference modes.
+Latent metrics are independently recomputed, with differences from the old
+evaluator recorded in legacy_max_absolute_difference.
+Decoder metadata records the episode split, alpha candidates, validation
+scores, and selected alpha. All decoder calibration uses nominal train data.
+
+4. revision_minimal_20261030/physical/<tag>_probe.npz
+Frozen linear ridge-decoder parameters:
+xm/xs: latent feature mean and standard deviation (192).
+ym/ys: target coordinate mean and standard deviation (6).
+w: ridge coefficients (192 by 6).
+Prediction: (((z-xm)/xs) @ w)*ys + ym.
+Target order: block xyz, then end-effector xyz.
+These are decoder parameters, NOT world-model weights or latent trajectories.
+
+5. Summary and statistical fields
+families: checkpoint-mean average, sample seed standard deviation, seed means,
+and counts. comparisons: signed differences and percentile bootstrap intervals.
+Training seeds are independently resampled within policies; common test groups
+are resampled jointly. Both conditional group-only and seed-and-group intervals
+are retained. Intervals are descriptive, unadjusted, and based on few seeds.
+
+6. Excluded data
+Original source expert HDF5; replay pixels; world-model checkpoint tensors;
+intermediate latent feature trajectories. Full replay-file sizes and SHA256
+identities are recorded without including those original HDF5 files.

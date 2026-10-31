@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "checks": [
+    "All main summary values, seed SDs, and bootstrap intervals match",
+    "Strict source split and unpaired assignment verified",
+    "All per-group/horizon aggregates verified",
+    "True-state persistence independently recomputed from exported positions",
+    "All 11 launch-time source hashes verified",
+    "Nine decoder parameter files and final training steps verified"
+  ],
+  "summary_tolerance": {
+    "rtol": 1e-10,
+    "atol": 1e-10
+  },
+  "position_recompute_tolerance": {
+    "rtol": 1e-06,
+    "atol": 1e-07
+  },
+  "scope": "Numerical reaggregation and exported-state audit only; no retraining or visual inference."
+}
