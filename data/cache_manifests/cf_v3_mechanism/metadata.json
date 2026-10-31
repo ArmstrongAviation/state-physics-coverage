@@ -1,0 +1,21 @@
+{
+  "files": [
+    "/data/chenyizi/lewm-data-study/counterfactual_v3_episode_disjoint/cube_nominal.h5",
+    "/data/chenyizi/lewm-data-study/counterfactual_v3_episode_disjoint/cube_mass_high.h5",
+    "/data/chenyizi/lewm-data-study/counterfactual_v3_episode_disjoint/cube_delay_2.h5"
+  ],
+  "starts": [
+    0,
+    10
+  ],
+  "group_start": 0,
+  "group_end": 64,
+  "windows": 384,
+  "unique_windows": 384,
+  "repeat_to": null,
+  "label_counts": {
+    "delay_2": 128,
+    "mass_high": 128,
+    "nominal": 128
+  }
+}
