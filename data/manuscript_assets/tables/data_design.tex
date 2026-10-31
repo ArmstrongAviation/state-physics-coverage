@@ -1,0 +1,17 @@
+\begin{table*}[t]
+\centering
+\caption{Principal training policies. N: nominal; M: mass and inertia multiplied by four; D: two-raw-action-step delay. All use 384 window records and 10,000 updates. Distinct source keys count episode/start pairs; distinct window identities also include condition and raw window start.}
+\label{tab:data}
+\footnotesize
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{lrrrrrr}
+\toprule
+Policy & Source records & Source keys & Episodes & N/M/D windows & Window records & Window identities \\
+\midrule
+State (S) & 192 & 191 & 128 & 384/0/0 & 384 & 382 \\
+Paired (P) & 64 & 64 & 64 & 128/128/128 & 384 & 384 \\
+Unpaired (U) & 192 & 191 & 128 & 128/128/128 & 384 & 382 \\
+\bottomrule
+\end{tabular}
+\end{table*}

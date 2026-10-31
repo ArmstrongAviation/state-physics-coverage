@@ -1,0 +1,19 @@
+\begin{table*}[t]
+\centering
+\caption{Physical position errors on strict held-out MD, in centimeters (mean $\pm$ sample seed standard deviation; three models per policy). All entries use 64 test groups and the same 18 future frames. Observed-latent decoding measures readout error without dynamics prediction. True-state persistence has privileged initial simulator position and is only a reference.}
+\label{tab:physical}
+\footnotesize
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{lrrrrrr}
+\toprule
+Prediction / reference & \multicolumn{3}{c}{Block position} & \multicolumn{3}{c}{End-effector position} \\ & S & P & U & S & P & U \\
+\midrule
+Observed future latent & $11.51\pm0.30$ & $11.78\pm0.52$ & $11.58\pm0.08$ & $10.85\pm0.36$ & $11.06\pm0.50$ & $10.94\pm0.17$ \\
+Teacher-forced prediction & $11.44\pm0.19$ & $12.23\pm0.36$ & $11.57\pm0.08$ & $10.86\pm0.31$ & $11.54\pm0.36$ & $11.03\pm0.21$ \\
+Free-running prediction & $14.87\pm0.36$ & $15.91\pm0.87$ & $15.28\pm1.27$ & $14.41\pm0.32$ & $15.27\pm1.01$ & $14.77\pm1.26$ \\
+Decoded-state persistence & $16.66\pm0.39$ & $17.29\pm0.33$ & $17.32\pm0.50$ & $16.89\pm0.58$ & $17.38\pm0.41$ & $17.45\pm0.32$ \\
+True-state persistence & $13.46\pm0.00$ & $13.46\pm0.00$ & $13.46\pm0.00$ & $15.25\pm0.00$ & $15.25\pm0.00$ & $15.25\pm0.00$ \\
+\bottomrule
+\end{tabular}
+\end{table*}
